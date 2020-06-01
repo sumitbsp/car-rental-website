@@ -96,6 +96,39 @@
         </div>
     </section>
 
+    <section id="price-calc" class="padding-x pt-5 pb-5">
+        <div>
+            <h2 class="text-center ">Price Calculator for your Journey</h2>
+            <p class="small text-center mb-5 font-italic">*prices shown here are approximate and may differ in real life
+                <p />
+            <form id="price-calc-form" action="">
+                <div class="form-group">
+                    <label for="vehicle-type">Vehicle Type</label>
+                    <select name="vehicleType" id="vehicle-type">
+                        <option value="hatch">Hatch-Back</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="mpv">MPV</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="kms">Number of Km's</label>
+                    <input name="kms" type="number" id="kms">
+                </div>
+
+                <div class="form-group">
+                    <label for="night-stay">Night Stays (If any)</label>
+                    <input name="nightStays" type="number" id="night-stay">
+                </div>
+
+                <input type="submit" value="Check">
+            </form>
+            <div class="price">
+
+            </div>
+        </div>
+    </section>
+
 
 
 

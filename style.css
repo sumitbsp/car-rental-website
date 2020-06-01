@@ -70,7 +70,7 @@ nav.navbar{
 }
 
 section.main {
-    background: url("/images/main-image.jpg") bottom center / cover no-repeat;
+    background: url("./images/main-image.jpg") bottom center / cover no-repeat;
     overflow: hidden;
     color: var(--font-color-primary);
 }
@@ -238,6 +238,7 @@ box-sizing: border-box;
     display: flex;
     flex-direction: column;
     border: 2px solid var(--secondary-color);
+    border-radius: 5px;
     box-shadow: 10px 10px 10px -5px rgb(197, 197, 197);
 }
 .contact-form input, .contact-form textarea {
@@ -251,5 +252,51 @@ box-sizing: border-box;
 }
 
 #contact-form-btn:hover{
+    background-color: #f8b03d;
+}
+
+/* price calculator */
+#price-calc{
+    background-color: #1f1f1f;
+    color: var(--font-color-primary);
+}
+
+#price-calc-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#price-calc-form div{
+    margin-bottom: 0;
+}
+label{
+    margin-bottom: 0;
+}
+
+select{
+    background-color: var(--font-color-primary);
+    border: 0;
+    border-radius: 5px;
+    height: 26px;
+    margin-left: 5px;
+}
+
+#price-calc-form input{
+    background-color: var(--font-color-primary);
+    border-radius: 5px;
+    border: 0;
+    width: 70px;
+    margin-left: 5px;
+}
+
+#price-calc-form input[type="submit"] {
+    background-color: var(--secondary-color);
+    font-weight: 500;
+    width: 100px;
+    box-shadow: 5px 5px 10px -3px rgb(77, 77, 77);
+}
+
+#price-calc-form input[type="submit"]:hover{
     background-color: #f8b03d;
 }
