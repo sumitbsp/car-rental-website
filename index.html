@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- aos library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Kanha Travels</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top pl-3 pr-3">
+        <a href="#" class="navbar-brand"><img src="/images/logo.png.png" alt=""></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item mr-5">
+                    <a href="#" class="nav-link" data-aos="fade-left" data-aos-duration="1500">About Us</a>
+                </li>
+                <li class="navbar-item mr-5">
+                    <a href="#" class="nav-link" data-aos="fade-left" data-aos-duration="1000">Request a Call</a>
+                </li>
+                <li class="navbar-item mr-5">
+                    <a href="#" class="nav-link" data-aos="fade-left" data-aos-duration="500">Price Calculator</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="main">
+        <div id="overlay"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- class="animate__animated animate__fadeInLeft" -->
+                <h1 data-aos="fade-right" data-aos-duration="1500">
+                    Own the <span class="special-word">Experience,</span>
+                    <br>
+                    Not the Ride
+                </h1>
+                <p data-aos="fade-left" data-aos-duration="1500" class="font-italic">The Number 1 car rental service in
+                    the town!</p>
+                <a data-aos="zoom-out-up" data-aos-duration="1500" id="call-btn" class="btn"
+                    href="#contact-form">Request a Call</a>
+            </div>
+            <div id="scroll-down" class="demo">
+                <a href="#about-us"><span></span></a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about-us" class="mt-5 padding-x">
+        <h2 class="heading text-center">About <span class="special-word">Us</span></h2>
+        <p class="text-center mb-5">Kanha Travels is the no.1 car rental service in Bilaspur from decades with top
+            quality service and 100% customer satisfaction.</p>
+        <div class="about-us-cards mb-5">
+            <div class="center-x-y" data-aos="fade-right">
+                <p>Clean and properly serviced Vehicles</p>
+            </div>
+            <div class="center-x-y" data-aos="fade-up">
+                <p>Our drivers are always on time. No chance of getting late to your destination</p>
+            </div>
+            <div class="center-x-y" data-aos="fade-left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-form" class="padding-x">
+        <div class="row">
+            <div class="col-md-6 center-x-y">
+                <div>
+                    <h2 class="" data-aos="fade-right">Request a Call</h2>
+                    <p data-aos="zoom-in" class="font-italic">Fill the details to get a callback from our side.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form class="contact-form" action="" data-aos="fade-left">
+                    <input class="form-control" type="text" placeholder="Enter Your Name">
+                    <input class="form-control" type="text" placeholder="Enter Your Phone Number">
+                    <textarea class="form-control" name="" id="" cols="30" rows="5"
+                        placeholder="Enter Message (Optional)"></textarea>
+                    <input id="contact-form-btn" type="submit" class="btn" value="Submit">
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- aos library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/app.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
