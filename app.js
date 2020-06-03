@@ -25,6 +25,6 @@ form.addEventListener('submit', (e) => {
 
     const priceDiv = document.querySelector('.price');
     priceDiv.innerHTML = `
-        <h2 class="text-center mt-5 special-word">Calculated Price: Rs.${calculatedPrice}<h2/>
+        <h2 class="text-center mt-5">Calculated Price: Rs.${calculatedPrice}<h2/>
     `
 })

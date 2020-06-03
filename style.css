@@ -12,7 +12,7 @@ html{
 body{
     font-family: 'Arvo', serif;
     color: var(--font-color-secondary)!important;
-    /* font-size: 1.1rem; */
+    font-size: 1.03rem;
 }
 
 /* utility */
@@ -28,6 +28,20 @@ body{
 
 .padding-x{
     padding: 0 100px;
+}
+
+@media (max-width: 700px) {
+    .padding-x {
+        padding: 0 30px;
+    }
+}
+@media (max-width: 500px) {
+    .padding-x {
+        padding: 0 20px;
+    }
+    body {
+        font-size: 1rem;
+    }
 }
 
 /* nav */
@@ -227,7 +241,7 @@ box-sizing: border-box;
 
 .contact-form div{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -256,8 +270,8 @@ box-sizing: border-box;
 
 /* price calculator */
 #price-calc{
-    background-color: #1f1f1f;
-    color: var(--font-color-primary);
+    /* background-color: #1f1f1f; */
+    color: var(--font-color-secondary);
 }
 
 #price-calc-form{
@@ -293,9 +307,41 @@ select{
     background-color: var(--secondary-color);
     font-weight: 500;
     width: 100px;
-    box-shadow: 5px 5px 10px -3px rgb(77, 77, 77);
+    border: 2px solid #f8b03d;
+    box-shadow: 2px 5px 10px -3px rgb(197, 197, 197);
 }
 
 #price-calc-form input[type="submit"]:hover{
     background-color: #f8b03d;
 }
+
+footer {
+    background-color: #1f1f1f;
+    color: var(--font-color-primary);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer>div {
+    width: 30%;
+}
+@media (max-width:700px){
+    footer>div {
+        width: 50%;
+    }
+    .contact-info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+footer img {
+    width: 60%;
+}
+
+/* .explore {
+    padding-left: 50px;
+} */
