@@ -43,3 +43,18 @@ form.addEventListener('submit', (e) => {
         </p>
     `
 })
+
+
+
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    console.log('Hello')
+    // generate the contact number value
+    emailjs.sendForm("gmail", "email", ".contact-form", "user_hXfP1MsYfR8rUrke4qGpG")
+        .then(() => {
+            flashMessage = document.querySelector('.form-flash');
+            flashMessage.classList.toggle('show')
+            contactForm.reset();
+        })
+});

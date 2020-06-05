@@ -78,7 +78,7 @@
         </div>
     </section>
 
-    <section class="contact-form padding-x">
+    <section id="contact-form" class="padding-x">
         <div class="row">
             <div class="col-md-6 center-x-y contact-form-container">
                 <div>
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="col-md-6 contact-form-container" data-aos="fade-left">
-                <form id="contact-form"">
+                <form class="contact-form"">
                     <input class=" form-control" name="name" type="text" placeholder="Enter Your Name">
                     <input class="form-control" name="number" type="text" placeholder="Enter Your Phone Number">
                     <textarea class="form-control" name="message" id="" cols="30" rows="5"
@@ -181,10 +181,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+
     <!-- aos library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./app.js"></script>
-
     <script>
         AOS.init();
     </script>
@@ -192,25 +191,13 @@
     <!-- emailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
     <script type="text/javascript">
+        // Setting up emails
         (function () {
             emailjs.init('user_hXfP1MsYfR8rUrke4qGpG');
         })();
     </script>
-    <script type="text/javascript">
-        window.onload = function () {
-            const contactForm = document.getElementById('contact-form');
-            contactForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-                console.log('Hello')
-                // generate the contact number value
-                emailjs.sendForm("gmail", "email", "#contact-form", "user_hXfP1MsYfR8rUrke4qGpG")
-                    .then(() => {
-                        flashMessage = document.querySelector('.form-flash');
-                        flashMessage.classList.toggle('show')
-                        contactForm.reset();
-                    })
-            });
-        }
+
+    <script src="./app.js"></script>
     </script>
 </body>
 
