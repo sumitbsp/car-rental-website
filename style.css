@@ -97,6 +97,12 @@ section.main .row{
     min-height: 100vh;
     z-index: 2;
 }
+@media (max-width:700px) {
+    section.main .row{
+        font-size: 0.8rem;
+        padding: 30px;
+    }
+}
 .special-word {
     color: var(--secondary-color) ;
 }
@@ -215,6 +221,8 @@ box-sizing: border-box;
 .about-us-cards div {
     width: 30%;
     min-width: 270px;
+    margin: auto;
+    margin-bottom: 30px;
     /* height: 200px; */
     position: relative;
     border: 2px solid var(--secondary-color);
@@ -235,8 +243,17 @@ box-sizing: border-box;
    background-color: rgb(248, 248, 248);
 }
 
-#contact-form div div {
+#contact-form .contact-form-container{
     padding: 50px;
+}
+@media (max-width:600px) {
+    #contact-form .contact-form-container{
+        padding: 0;
+    }
+    #contact-form .row {
+        padding: 50px 0;
+        text-align: center;
+    }
 }
 
 .contact-form div{
@@ -277,11 +294,24 @@ box-sizing: border-box;
 #price-calc-form{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
 }
 
 #price-calc-form div{
-    margin-bottom: 0;
+    margin-bottom: 10px;
+}
+@media (max-width:700px) {
+    #price-calc-form div{
+        width: 100%;
+        /* margin: auto;
+        margin-bottom: 10px; */
+        display: flex;
+        justify-content: space-between;
+    }
+    #price-calc-form input[type="submit"]{
+        margin: auto;
+    }
 }
 label{
     margin-bottom: 0;
