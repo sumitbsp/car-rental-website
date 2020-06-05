@@ -10,21 +10,36 @@ form.addEventListener('submit', (e) => {
     const nightStay = document.getElementById('night-stay');
 
     let calculatedPrice;
-
+    let priceOfVehicle;
+    let displayVehicle;
     calculatedPrice = nightStay.value * 200;
 
+
     if (vehicleType.value === 'hatch') {
-        calculatedPrice += (kms.value * 12);
+        priceOfVehicle = 15;
+        calculatedPrice += (kms.value * priceOfVehicle) + 500;
+        displayVehicle = 'Hatch-Back';
     }
     if (vehicleType.value === 'sedan') {
-        calculatedPrice += (kms.value * 15);
+        priceOfVehicle = 18;
+        calculatedPrice += (kms.value * priceOfVehicle);
+        displayVehicle = 'Sedan';
     }
     if (vehicleType.value === 'mpv') {
-        calculatedPrice += (kms.value * 18);
+        priceOfVehicle = 20;
+        calculatedPrice += (kms.value * priceOfVehicle);
+        displayVehicle = 'MPV';
     }
 
     const priceDiv = document.querySelector('.price');
     priceDiv.innerHTML = `
-        <h2 class="text-center mt-5">Calculated Price: Rs.${calculatedPrice}<h2/>
+        <h2 class="text-center mt-5">Calculated Price: Rs.${calculatedPrice}</h2>
+        <p class="text-center mb-1">Fair breakup-</p>
+        <p class="small text-center">Service charge = Rs.500
+            <br/>
+            ${kms.value} kms x ${priceOfVehicle} ( ${displayVehicle} = Rs.${priceOfVehicle}/km ) 
+            <br/>
+            Night Stay: Rs.500/night
+        </p>
     `
 })

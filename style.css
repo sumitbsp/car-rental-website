@@ -5,8 +5,16 @@
 }
 /*rgb(46, 46, 46)*/
 
-html{
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
     scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
 }
 
 body{
@@ -53,6 +61,7 @@ body{
     z-index: 3;
     color: var(--font-color-primary);
     transition:500ms ease;
+    width: 100%;
 }
 nav.navbar{
     padding-left: 5vw!important;
@@ -94,7 +103,7 @@ section.main .row{
     /* background-color: aqua; */
     padding: 100px;
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
     z-index: 2;
 }
 @media (max-width:700px) {
@@ -113,7 +122,7 @@ section.main .row{
     top: 0;
     left: 0;
     right: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
 }
 
@@ -134,15 +143,6 @@ section.main .row div{
     
 }
 
-.arrow-down {
-    transform: rotate(90deg);
-    font-size: 2rem;
-    position: absolute;
-    bottom: 10px;
-    right: 50%;
-    color: var(--secondary-color);
-}
-
 /* Scroll down button*/
 
 #scroll-down a {
@@ -150,7 +150,7 @@ section.main .row div{
   }
 #scroll-down a span {
 position: absolute;
-bottom: 10px;
+bottom: 20px;
 left: 50%;
 width: 30px;
 height: 50px;
@@ -207,62 +207,72 @@ box-sizing: border-box;
 }
 
 /* about us*/
-.about-us{
-    height: auto;
-    border: 1px solid var(--secondary-color);
-}
-
-.about-us-cards {
+#about-us .about-us-cards {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-end;
     flex-wrap: wrap;
 }
 .about-us-cards div {
     width: 30%;
+    height: 330px;
     min-width: 270px;
     margin: auto;
     margin-bottom: 30px;
-    /* height: 200px; */
     position: relative;
     border: 2px solid var(--secondary-color);
     border-radius: 5px;
     /* padding: 30px 15px; */
     box-shadow: 10px 10px 10px -5px rgb(223, 223, 223);
 }
+@media (max-width:1150px) {
+    .about-us-cards div{
+        height: 300px;
+    }
+}
+@media (max-width:1000px) {
+    .about-us-cards div{
+        height: 280px;
+    }
+}
+@media (max-width:750px) {
+    .about-us-cards div{
+        height: auto;
+    }
+}
 .about-us-cards div:hover{
     box-shadow: 0 0 0 0;
 }
 .about-us-cards div p{
-    margin-top: 5px;
+    /* margin: 2px 0; */
     padding: 10px 7px;
 }
 
 /* contact form */
-#contact-form{
+.contact-form{
    background-color: rgb(248, 248, 248);
 }
 
-#contact-form .contact-form-container{
+.contact-form .contact-form-container{
     padding: 50px;
 }
 @media (max-width:600px) {
-    #contact-form .contact-form-container{
+    .contact-form .contact-form-container{
         padding: 0;
     }
-    #contact-form .row {
+    .contact-form .row {
         padding: 50px 0;
         text-align: center;
     }
 }
 
-.contact-form div{
+#contact-form div{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.contact-form{
+#contact-form{
     width: 80%;
     margin: auto;
     display: flex;
@@ -271,7 +281,7 @@ box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 10px 10px 10px -5px rgb(197, 197, 197);
 }
-.contact-form input, .contact-form textarea {
+#contact-form input, #contact-form textarea {
     /* border-bottom: 1px solid grey; */
 }
 
@@ -283,6 +293,32 @@ box-sizing: border-box;
 
 #contact-form-btn:hover{
     background-color: #f8b03d;
+}
+
+.hidden{
+    display: none;
+    text-align: center;
+}
+.show{
+    display: block;
+}
+.form-flash{
+    color: var(--font-color-primary);
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 10px -5px rgb(197, 197, 197);
+}
+.form-flash p {
+    margin: 0;
+}
+@media (max-width:600px) {
+    .form-flash{
+        margin: auto;
+        margin-top: 40px;
+    } 
 }
 
 /* price calculator */
@@ -351,6 +387,19 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+@media (max-width:700px) {
+    footer{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .explore{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-image{
+        display: none;
+    }
 }
 
 footer>div {

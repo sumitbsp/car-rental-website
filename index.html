@@ -17,8 +17,8 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top pl-3 pr-3">
-        <a href="#" class="navbar-brand"><img src="/images/logo.png.png" alt=""></a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a href="#" class="navbar-brand"><img src="./images/logo.png" alt=""></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,7 +41,6 @@
         <div id="overlay"></div>
         <div class="row">
             <div class="col-md-6">
-                <!-- class="animate__animated animate__fadeInLeft" -->
                 <h1 data-aos="fade-right" data-aos-duration="1500">
                     Own the <span class="special-word">Experience,</span>
                     <br>
@@ -79,7 +78,7 @@
         </div>
     </section>
 
-    <section id="contact-form" class="padding-x">
+    <section class="contact-form padding-x">
         <div class="row">
             <div class="col-md-6 center-x-y contact-form-container">
                 <div>
@@ -87,24 +86,28 @@
                     <p data-aos="zoom-in" class="font-italic">Fill the details to get a callback from our side.</p>
                 </div>
             </div>
-            <div class="col-md-6 contact-form-container">
-                <form class="contact-form" action="" data-aos="fade-left">
-                    <input class="form-control" type="text" placeholder="Enter Your Name">
-                    <input class="form-control" type="text" placeholder="Enter Your Phone Number">
-                    <textarea class="form-control" name="" id="" cols="30" rows="5"
+            <div class="col-md-6 contact-form-container" data-aos="fade-left">
+                <form id="contact-form"">
+                    <input class=" form-control" name="name" type="text" placeholder="Enter Your Name">
+                    <input class="form-control" name="number" type="text" placeholder="Enter Your Phone Number">
+                    <textarea class="form-control" name="message" id="" cols="30" rows="5"
                         placeholder="Enter Message (Optional)"></textarea>
                     <input id="contact-form-btn" type="submit" class="btn" value="Submit">
                 </form>
+            </div>
+            <div class="text-center form-flash hidden">
+                <p>Thank you for contacting us! <br> We will get back to you soon. </p>
             </div>
         </div>
     </section>
 
     <section id="price-calc" class="padding-x pt-5 pb-5">
         <div>
-            <h2 class="text-center ">Price Calculator for your Journey</h2>
-            <p class="small text-center mb-5 font-italic">*prices shown here are approximate and may differ in real life
+            <h2 class="text-center" data-aos="fade-right">Price Calculator for your Journey</h2>
+            <p class="small text-center mb-5 font-italic" data-aos="fade-right">*prices shown here are approximate and
+                may differ in real life
                 <p />
-            <form id="price-calc-form" action="">
+            <form id="price-calc-form" action="" data-aos="fade-left">
                 <div class="form-group">
                     <label for="vehicle-type">Vehicle Type</label>
                     <select name="vehicleType" id="vehicle-type">
@@ -133,8 +136,8 @@
     </section>
 
     <footer class="padding-x pt-5 pb-5">
-        <div class="">
-            <img src="./images/logo.png.png" alt="">
+        <div class="footer-image">
+            <img src="./images/logo.png" alt="">
             <p class="mt-2 pl-3">Own the Experience
                 <br>
                 Not the Ride
@@ -184,6 +187,30 @@
 
     <script>
         AOS.init();
+    </script>
+
+    <!-- emailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('user_hXfP1MsYfR8rUrke4qGpG');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                console.log('Hello')
+                // generate the contact number value
+                emailjs.sendForm("gmail", "email", "#contact-form", "user_hXfP1MsYfR8rUrke4qGpG")
+                    .then(() => {
+                        flashMessage = document.querySelector('.form-flash');
+                        flashMessage.classList.toggle('show')
+                        contactForm.reset();
+                    })
+            });
+        }
     </script>
 </body>
 
