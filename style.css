@@ -5,6 +5,10 @@
 }
 /*rgb(46, 46, 46)*/
 
+html {
+    scroll-padding-top: 70px; /* height of sticky header */
+}
+
 
 html,body
 {
