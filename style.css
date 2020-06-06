@@ -5,13 +5,10 @@
 }
 /*rgb(46, 46, 46)*/
 
-html{
-    height: 100%;
-}
+
 html,body
 {
     width: 100%;
-
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
@@ -80,6 +77,10 @@ nav.navbar{
   }
 .navbar a {
     color: var(--font-color)!important;
+    transition: color 0.2s!important;
+}
+.navbar a:hover {
+    color: var(--secondary-color)!important;
 }
 
 @media(max-width: 768px){
@@ -94,7 +95,7 @@ nav.navbar{
     color:white!important;
 }
 .navbar a img {
-    width: 150px;
+    width: 130px;
 }
 
 section.main {
@@ -112,8 +113,16 @@ section.main .row{
 }
 @media (max-width:700px) {
     section.main .row{
+        height: 90vh;
         font-size: 0.8rem;
         padding: 30px;
+        padding-bottom: 50px;
+    }
+    h1{
+        font-size: 2.2rem;
+    }
+    #overlay{
+        height: 90vh;
     }
 }
 .special-word {
@@ -128,6 +137,11 @@ section.main .row{
     right: 0;
     height: 100vh;
     width: 100%;
+}
+@media(max-width:700px){
+    #overlay{
+        height: 90vh;
+    }
 }
 
 section.main .row div{
@@ -388,6 +402,14 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+footer a{
+    color: var(--font-color-primary);
+    transition: all 0.2s;
+}
+footer a:hover{
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 @media (max-width:700px) {
     footer{

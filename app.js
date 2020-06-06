@@ -46,7 +46,7 @@ form.addEventListener('submit', (e) => {
 
 
 
-const contactForm = document.getElementById('contact-form');
+const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', function (event) {
     event.preventDefault();
     console.log('Hello')
@@ -54,7 +54,7 @@ contactForm.addEventListener('submit', function (event) {
     emailjs.sendForm("gmail", "email", ".contact-form", "user_hXfP1MsYfR8rUrke4qGpG")
         .then(() => {
             flashMessage = document.querySelector('.form-flash');
-            flashMessage.classList.toggle('show')
+            flashMessage.classList.add('show')
             contactForm.reset();
         })
 });
